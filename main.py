@@ -6,6 +6,8 @@ import requests
 import pandas as pd
 import glob
 import os
+from convertToJSON import *
+
 
 def createFile(path):
     if not os.path.exists(path):
@@ -42,3 +44,8 @@ while i < len(years):
 combined_csv = pd.concat([pd.read_csv(f, encoding='latin-1') for f in csv_list ])
 #to .csv
 combined_csv.to_csv(directory+"/pamplonaMAN.csv", index=False, encoding='latin-1')
+
+#convert to json
+json_directory = "./results/pamplonaMAN/pamplonaMAN.json"
+createFile(json_directory)
+convert_toJSON(json_directory, csv_list)
