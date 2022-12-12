@@ -87,6 +87,16 @@ def convert_toJSON(directory, files):
         bb_max /= cont
         bb_min /= cont
         bb_prez /= cont
+        if max_tenp == 0.0:
+            max_tenp = 'null'
+        if min_tenp == 0.0:
+            min_tenp = 'null'
+        if bb_max == 0.0:
+            bb_max = 'null'
+        if bb_min == 0.0:
+            bb_min = 'null'
+        if bb_prez == 0.0:
+            bb_prez = 'null'
         rows.append([year, max_tenp, bb_max, bb_min, min_tenp, bb_prez])
     text['data'] = rows
 
