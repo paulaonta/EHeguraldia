@@ -1,0 +1,188 @@
+{
+    "license": "CC0-1.0",
+    "description": {
+        "eu": " Datu meteorologikoak"
+    },
+    "schema": {
+        "fields": [
+            {
+                "name": "date",
+                "type": "string",
+                "title": {
+                    "ar": "data"
+                }
+            },
+            {
+                "name": "avgTemp",
+                "type": "number",
+                "title": {
+                    "eu": "Batazbesteko tenperatura"
+                }
+            },
+            {
+                "name": "highTemp",
+                "type": "number",
+                "title": {
+                    "eu": "Tenperatura maximoa"
+                }
+            },
+            {
+                "name": "highTempAvg",
+                "type": "number",
+                "title": {
+                    "eu": "Tenperatura maximoaren batezbestekoa"
+                }
+            },
+            {
+                "name": "lowTemp",
+                "type": "number",
+                "title": {
+                    "eu": "Tenperatura minimoa"
+                }
+            },
+            {
+                "name": "highTempAvg",
+                "type": "number",
+                "title": {
+                    "eu": "Tenperatura minimoaren batezbestekoa"
+                }
+            },
+            {
+                "name": "hez",
+                "type": "number",
+                "title": {
+                    "eu": "Batazbesteko hezetasuna"
+                }
+            },
+            {
+                "name": "precip",
+                "type": "number",
+                "title": {
+                    "eu": "Pilatutako prezipitazioak"
+                }
+            }
+        ]
+    },
+    "data": [
+        [
+            "01/2020",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "02/2020",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "03/2020",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "04/2020",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "05/2020",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "06/2020",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "07/2020",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "08/2020",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "09/2020",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "10/2020",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "11/2020",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "12/2020",
+            50.192,
+            10.32,
+            1.938333333333333,
+            -6.43,
+            -0.35233333333333333,
+            34.59733333333334,
+            3.83
+        ]
+    ]
+}
