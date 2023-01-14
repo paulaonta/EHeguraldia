@@ -27,6 +27,17 @@ stations = ["abaurregaina-abaurrea%20alta", "aibar%20man", "aldatz",  "alli-larr
             "olóriz", "oroz-betelu", "otazu", "pamplona%20man", "puente%20la%20reina", "sartaguda%20man", "sesma%20man", "sunbilla", "tudela%20man",
             "urbasa%20man", "urzainqui", "viana", "yesa%20man", "zalba", "zuazu", "zubiri", "zugarramurdi"]
 
+stations_name = ["abaurregaina-abaurrea  alta", "aibar  man", "aldatz",  "alli-larraun" ,"alloz", "altsasu-alsasua", "amaiur-maya", "amillano", "andosilla", "aoiz  man",
+            "arano", "areso", "aribe", "arizkun", "arróniz", "artaiz", "artieda", "artikutza", "aurizberri-espinal", "azanza", "azpirotz",
+            "barásoain", "belate", "belzunce", "bera", "bertiz", "betelu", "buñuel",  "cabanillas", "cábrega", "cadreita  man",
+            "caparroso", "carcastillo  (la  oliva)  man", "cáseda", "central  arrambide", "corella  man", "doneztebe-santesteban  man", "epároz",
+            "erro", "esparza  de  salazar", "estella  man", "etxalar", "eugi", "falces  man", "fitero  man", "galbarra",
+            "genevilla", "goizueta", "goni", "igúzquiza", "ilundáin  man", "iraizotz", "irotz", "irurita  (baztan)  man", "irurtzun",
+            "isaba-refugio  belagua  man", "javier", "larraona", "leire", "leitza", "lekaroz  man", "lerga", "lerín  man", "lesaka", "lesaka-san  anton",
+            "lezáun", "lodosa", "los  arcos", "luzaide-valcarlos", "miranda", "monreal", "monteagudo", "mugiro", "navascués", "noáin  man", "olague", "olite  man",
+            "olóriz", "oroz-betelu", "otazu", "pamplona  man", "puente  la  reina", "sartaguda  man", "sesma  man", "sunbilla", "tudela  man",
+            "urbasa  man", "urzainqui", "viana", "yesa  man", "zalba", "zuazu", "zubiri", "zugarramurdi"]
+
 codes= [ "43", "44", "500", "45", "47", "49", "166", "50", "59", "61", "501", "63", "65", "66", "68", "489", "72", "74", "116",
          "78", "80", "81", "84", "85", "227", "87", "88", "90", "93", "95", "96", "97", "98", "100", "101", "108", "210", "112",
          "114", "115", "117", "120", "121", "124", "125", "126", "128", "129", "130", "136", "138", "141", "142", "427", "144",
@@ -35,9 +46,14 @@ codes= [ "43", "44", "500", "45", "47", "49", "166", "50", "59", "61", "501", "6
          "231", "236", "237", "238", "239", "240"]
 
 assert (len(stations) == len(codes))
+
+#json for ALL data
+json_directory_GLOBAL = "./results/all_stations_MAN.json"
+createFile(json_directory_GLOBAL)
+
 for j in range(len(stations)):
     createDirectory("./results")
-    directory = "./results/" + stations[j]
+    directory = "./results/" + stations_name[j]
     createDirectory(directory)
     csv_list = []
     partial_link = "http://meteo.navarra.es/_data/datos_estaciones/estacion_"
@@ -65,9 +81,10 @@ for j in range(len(stations)):
         # Return a list of all joined files
         combined_csv = pd.concat([pd.read_csv(f, encoding='latin-1') for f in csv_list])
         # to .csv
-        combined_csv.to_csv(directory + "/" + stations[j] + ".csv", index=False, encoding='latin-1')
+        combined_csv.to_csv(directory + "/" + stations_name[j] + ".csv", index=False, encoding='latin-1')
 
         # convert to json
-        json_directory = directory + "/" + stations[j] + ".json"
+        json_directory = directory + "/" + stations_name[j] + ".json"
         createFile(json_directory)
         convert_toJSON(json_directory, csv_list)
+        convert_toJSON_GLOBAL(json_directory_GLOBAL, csv_list, stations_name[j])

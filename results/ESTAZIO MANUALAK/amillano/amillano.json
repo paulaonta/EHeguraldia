@@ -1,7 +1,7 @@
 {
     "license": "CC0-1.0",
     "description": {
-        "eu": " Datu meteorologikoak"
+        "eu": "Datu meteorologikoak"
     },
     "schema": {
         "fields": [
@@ -34,7 +34,7 @@
                 }
             },
             {
-                "name": "highTempAvg",
+                "name": "lowTempAvg",
                 "type": "number",
                 "title": {
                     "eu": "Tenperatura minimoaren batezbestekoa"

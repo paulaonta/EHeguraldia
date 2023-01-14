@@ -25,17 +25,32 @@ stations = ["ablitas%20mapa","abodi%20(pikatua)%20gn", "adiós%20mapa", "aguilar
     "gorramendi%20gn", "iñarbegi%20gn", "irabia%20gn", "isaba-refugio%20belagua%20gn", "lerín%20intia", "los%20arcos%20mapa", "lumbier%20intia", "miranda%20de%20arga%20mapa",
     "murillo%20el%20fruto%20mapa", "olite%20intia", "oskotz%20gn", "pamplona%20(etsia)%20upna", "pamplona%20gn", "san%20adrián%20mapa","san%20martín%20de%20unx%20mapa",
     "sartaguda%20%20intia", "sartaguda%20gn", "sesma%20mapa", "tafalla%20gn","traibuenas%20intia", "trinidad%20de%20iturgoien%20gn", "tudela%20(montes%20del%20cierzo)%20gn",
-    "tudela%20(valdetellas)%20mapa", "ujué%20gn", "urbasa%20gn", "villanueva%20de%20yerri%20gn", "yesa%20gn", "ancín%20intia"]
+    "tudela%20(valdetellas)%20mapa", "ujué%20gn", "urbasa%20gn", "villanueva%20de%20yerri%20gn", "yesa%20gn"]#, "ancín%20intia"]
+
+stations_name = ["ablitas mapa","abodi (pikatua) gn", "adiós mapa", "aguilar de codés gn", "aibar mapa", "aoiz gn", "aralar gn",
+    "arangoiti gn", "arazuri intia", "artajona mapa", "bardenas (barranco) intia", "bardenas (el plano) mapa", "bardenas (el yugo) gn",
+    "bardenas (loma negra) gn", "bargota mapa", "beortegi gn", "bera (larrategaña) gn", "cadreita intia", "carcastillo (la oliva) gn",
+    "carrascal gn", "cascante mapa", "corella intia", "doneztebe-santesteban gn", "el perdón gn", "eltzaburu gn", "erremendia (salazar) gn",
+    "estella gn", "etxalar (orizkiko lepoa) gn", "etxarri-aranatz gn", "falces mapa", "fitero mapa", "funes intia", "getadar gn", "goizueta gn",
+    "gorramendi gn", "iñarbegi gn", "irabia gn", "isaba-refugio belagua gn", "lerín intia", "los arcos mapa", "lumbier intia", "miranda de arga mapa",
+    "murillo el fruto mapa", "olite intia", "oskotz gn", "pamplona (etsia) upna", "pamplona gn", "san adrián mapa","san martín de unx mapa",
+    "sartaguda  intia", "sartaguda gn", "sesma mapa", "tafalla gn","traibuenas intia", "trinidad de iturgoien gn", "tudela (montes del cierzo) gn",
+    "tudela (valdetellas) mapa", "ujué gn", "urbasa gn", "villanueva de yerri gn", "yesa gn"]#, "ancín intia"]
 
 codes =["274", "519", "263", "33", "262", "34", "22", "23", "243", "264", "6", "275", "31", "26", "268", "12", "460", "4", "35", "24", "276", "258", "42", "28","461",
         "249", "7", "517", "8", "269", "273", "259", "246", "499", "25", "497", "32", "502","267", "424", "247", "266", "270", "257", "37", "405", "455", "271", "265","5", "21", "423", "9",
-        "242", "29", "36", "272","30", "250", "11", "10", "251"]
+        "242", "29", "36", "272","30", "250", "11", "10"]#, "251"]
 #WARNING! To get the last station info. is neccesary to change the years to [2015-2022]
 
 assert (len(stations) == len(codes))
+
+#json for ALL data
+json_directory_GLOBAL = "./results1/all_stations_AUT.json"
+createFile(json_directory_GLOBAL)
+
 for j in range(len(stations)):
-    createDirectory("./results")
-    directory = "./results/" + stations[j]
+    createDirectory("./results1")
+    directory = "./results1/" + stations_name[j]
     createDirectory(directory)
     csv_list = []
     partial_link = "http://meteo.navarra.es/_data/datos_estaciones/estacion_"
@@ -66,9 +81,10 @@ for j in range(len(stations)):
         # Return a list of all joined files
         combined_csv = pd.concat([pd.read_csv(f, encoding='latin-1') for f in csv_list ])
         #to .csv
-        combined_csv.to_csv(directory + "/" + stations[j] + ".csv", index=False, encoding='latin-1')
+        combined_csv.to_csv(directory + "/" + stations_name[j] + ".csv", index=False, encoding='latin-1')
 
         #convert to json
-        json_directory = directory + "/" + stations[j] + ".json"
+        json_directory = directory + "/" + stations_name[j] + ".json"
         createFile(json_directory)
         convert_toJSON_AUT(json_directory, csv_list)
+        convert_toJSON_GLOBAL_AUT(json_directory_GLOBAL, csv_list, stations_name[j])
