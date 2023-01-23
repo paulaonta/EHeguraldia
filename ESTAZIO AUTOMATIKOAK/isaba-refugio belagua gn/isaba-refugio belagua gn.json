@@ -1,0 +1,207 @@
+{
+    "license": "CC0-1.0",
+    "description": {
+        "eu": "Datu meteorologikoak"
+    },
+    "schema": {
+        "fields": [
+            {
+                "name": "date",
+                "type": "string",
+                "title": {
+                    "ar": "data"
+                }
+            },
+            {
+                "name": "avgTemp",
+                "type": "number",
+                "title": {
+                    "eu": "Batazbesteko tenperatura"
+                }
+            },
+            {
+                "name": "highTemp",
+                "type": "number",
+                "title": {
+                    "eu": "Tenperatura maximoa"
+                }
+            },
+            {
+                "name": "avgHighTemp",
+                "type": "number",
+                "title": {
+                    "eu": "Tenperatura maximoaren batezbestekoa"
+                }
+            },
+            {
+                "name": "lowTemp",
+                "type": "number",
+                "title": {
+                    "eu": "Tenperatura minimoa"
+                }
+            },
+            {
+                "name": "avgLowTemp",
+                "type": "number",
+                "title": {
+                    "eu": "Tenperatura minimoaren batezbestekoa"
+                }
+            },
+            {
+                "name": "hez",
+                "type": "number",
+                "title": {
+                    "eu": "Batazbesteko hezetasuna"
+                }
+            },
+            {
+                "name": "precip",
+                "type": "number",
+                "title": {
+                    "eu": "Pilatutako prezipitazioak"
+                }
+            },
+            {
+                "name": "precipDays",
+                "type": "number",
+                "title": {
+                    "eu": "Euria egin duen egun kopurua"
+                }
+            }
+        ]
+    },
+    "data": [
+        [
+            "2020-01",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "2020-02",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "2020-03",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "2020-04",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "2020-05",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "2020-06",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "2020-07",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "2020-08",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "2020-09",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "2020-10",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "2020-11",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+        ],
+        [
+            "2020-12",
+            "null",
+            10.32,
+            1.938333333333333,
+            -6.43,
+            -0.35233333333333333,
+            "null",
+            114.9,
+            13
+        ]
+    ]
+}
