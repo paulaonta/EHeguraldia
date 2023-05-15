@@ -10,7 +10,7 @@ Ancín intia estazio automatikoan kode aldatu behar da.  ``years = [str(i) for i
 
 
 ## Gipuzkoa/Bizkaia/Arabakoa eguraldia jaisteko
-**Ezarpena** karpeta ``WikiEguraldia.py`` fitxategiaren _path_ berdinean egon behar da bertan emaitzak gordeko baitira. 
+**Ezarpena** karpeta ``WikiEguraldia.py`` fitxategiaren _path_ berdinean egon behar da bertan emaitzak gordeko direlako. 
 
 
 ## Wikipediara igotzeko pausuak
