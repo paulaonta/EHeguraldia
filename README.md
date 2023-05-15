@@ -3,7 +3,7 @@ Euskal Herriko eguraldia jaisteko tresna. Kodea Wikipediako (https://eu.wikipedi
 
 
 ## Nafarroako eguraldia jaisteko
-Estazio manualak jaisteko *kode* karpetako ```mainAUT.py``` eta ```mainMAN.py``` fitxategiak daude bakoitzak estazio automatikoak eta manualak jaisten dituztelarik, hurrenez hurren. Horien emaitza **ESTAZAIO AUTOMATIKOAK** eta  **ESTAZAIO MANUALAK** karpetetan gordetzen dira _json_ formatuan.
+Estazio manualak jaisteko *kode* karpetako ```mainAUT.py``` eta ```mainMAN.py``` fitxategiak daude bakoitzak estazio automatikoak eta manualak jaisten dituztelarik, hurrenez hurren. Horien emaitza **ESTAZIO AUTOMATIKOAK** eta  **ESTAZIO MANUALAK** karpetetan gordetzen dira _json_ formatuan.
 
 #### **KONTUZ!!!**
 Ancín intia estazio automatikoan kode aldatu behar da.  ``years = [str(i) for i in range(1880, 2022)]`` lerroan hurrengoa jarriz: ``years = [str(i) for i in range(2015, 2022)]``
